@@ -1,73 +1,61 @@
-# React + TypeScript + Vite
+# AMMU 🎬
+### Premium Streaming Experience Redefined
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
-Currently, two official plugins are available:
+Ammu is a high-performance, aesthetically pleasing streaming platform built for the modern web. It combines the massive content library of TMDB with reliable, high-quality streaming mirrors to provide a seamless cinematic experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- 🎭 **Infinite Library**: Search and browse thousands of movies and TV shows.
+- 🌌 **Immersive UI**: A stunning dark-mode interface with ambient animations and glassmorphism.
+- 🚀 **Lightning Fast**: Built on Vite and React for near-instant page transitions.
+- 📺 **Multi-Source Playback**: Integrated with premium streaming providers like 2Embed.cc.
+- 📱 **Responsive Design**: Optimized for all screen sizes, from mobile to ultra-wide monitors.
+- 🔍 **Smart Search**: Real-time search with instant results and category filtering.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technology Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: React 19 + TypeScript
+- **Bundler**: Vite
+- **Styling**: Vanilla CSS (Custom Design System)
+- **Data Source**: TMDB (The Movie Database) API
+- **Streaming**: 2Embed.cc API
+- **Deployment**: Vercel
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/njangid22/ammu.git
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. **Set up Environment Variables**
+   Create a `.env` file in the root directory:
+   ```env
+   VITE_TMDB_API_KEY=your_tmdb_key
+   VITE_TMDB_BASE_URL=https://api.themoviedb.org/3
+   VITE_TMDB_IMAGE_BASE=https://image.tmdb.org/t/p
+   VITE_2EMBED_BASE_URL=https://www.2embed.cc
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+4. **Run development server**
+   ```bash
+   npm run dev
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📜 License
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This project is for educational and personal use. Content is provided via third-party APIs.
+
+---
+
+Built with ❤️ for a better streaming experience.
